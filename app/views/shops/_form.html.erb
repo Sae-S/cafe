@@ -1,0 +1,8 @@
+<div class="div">
+  <%= simple_form_for @shop do |f| %>
+    <%= f.input :name %>
+    <%= f.input :rating, collection: 1..5%>
+    <%= f.input :address%>
+    <%= f.submit class: 'btn btn-primary mt-2' %>
+  <% end %>
+</div>

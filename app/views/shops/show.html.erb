@@ -1,16 +1,31 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cf46ca73864367.5c1818850574b.jpg);">
-  <div class="container">
-    <h1><%= @shop.name %></h1>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cf46ca73864367.5c1818850574b.jpg);">
+  <div class="row">
+    <div class="col-md-7 my-auto">
+      <h1><%= @shop.name %></h1>
+    </div>
+    <div class="col-md-5">
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2>About</h2>
+            <div class="d-flex">
+              <% @shop.rating.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+              <% (5 - @shop.rating).times do %>
+                <i class="far fa-star"></i>
+              <% end %>
+            </div>
+          <p><%= @shop.address %></p>
+          <%= link_to 'Edit Info', edit_shop_path(@shop), class: "btn btn-info"%>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class = "container">
-    <h1><%= @shop.rating %></h1>
-    <p><%= @shop.address %></p>
-    <%= link_to 'Edit Info', edit_shop_path(@shop), class: "btn btn-info"%>
 
-  <%= link_to 'Back', shops_path %>
+  <%= link_to 'Back', shops_path, class: "btn btn-info" %>
   <%# <%= link_to 'Add a menu item', new_shop_review_path(@shop) %>
-
 
 </div>

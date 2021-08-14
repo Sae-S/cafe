@@ -1,0 +1,5 @@
+<div class="container">
+  <h1>Update <%= @shop.name%></h1>
+  <%= render 'shops/form', shop: @shop%>
+  <p><%= link_to '< Back', shop_path(@shop), class: 'btn btn-light' %></p>
+</div>
