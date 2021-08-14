@@ -2,6 +2,19 @@
   padding: 32px;
 }
 
+.container-new{
+  padding: 32px;
+  background-color: #FFE0B5;
+  h1{
+    font-family: 'Merriweather', serif;
+  }
+  .btn{
+    border-radius: 30px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+  }
+}
+
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
   .container {

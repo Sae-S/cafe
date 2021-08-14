@@ -24,8 +24,20 @@
 </div>
 
 <div class = "container">
-
-  <%= link_to 'Back', shops_path, class: "btn btn-info" %>
-  <%# <%= link_to 'Add a menu item', new_shop_review_path(@shop) %>
-
+  <%= link_to 'Add a Menu Item', new_shop_menu_path(@shop), class: "btn btn-info" %>
+  <ul class="list-group">
+    <h2>Menu Items</h2>
+    <% @shop.menus.each do |menu| %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><% menu.name %></h2>
+            <p><% menu.description %></p>
+          </div>
+          <h2><% menu.price%></h2>
+        </div>
+      </div>
+    <% end %>
+  </ul>
 </div>
