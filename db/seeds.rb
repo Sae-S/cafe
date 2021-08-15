@@ -10,7 +10,7 @@ require 'open-uri'
 puts 'Cleaning the db...'
 Shop.destroy_all
 
-5.times do
+2.times do
   Shop.create!(
     name: Faker::Creature::Dog.name,
     address: Faker::Address.street_address,
