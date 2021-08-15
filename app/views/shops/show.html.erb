@@ -16,7 +16,7 @@
               <% end %>
             </div>
           <p><i class="fas fa-map-pin"></i> <%= @shop.address %></p>
-          <%= link_to 'Edit Info', edit_shop_path(@shop), class: "btn btn-info"%>
+          <%= link_to 'Edit Info', edit_shop_path(@shop), class: "btn btn-outline-brown"%>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
 <div class = "container">
   <div class="container-menu">
     <h2>Menu Items</h2>
-    <%= link_to 'Add Item', new_shop_menu_path(@shop), class: "btn btn-info" %>
+    <%= link_to 'Add Item', new_shop_menu_path(@shop), class: "btn btn-outline-brown" %>
   </div>
   <div class="row">
     <% @shop.menus.each do |menu| %>
@@ -45,10 +45,10 @@
       <% else %>
         <div class="card-trip" style="background-color">
           <div>
-            <h2><%= menu.name %></h2>
-            <p><%= menu.description %></p>
-          </div>
-          <h2>＄<%= menu.price%></h2>
+              <h2><%= menu.name %></h2>
+              <p><%= menu.description %></p>
+            </div>
+            <h2>＄<%= menu.price%></h2>
         </div>
       <% end %>
       </div>

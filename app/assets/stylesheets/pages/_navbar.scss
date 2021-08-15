@@ -1,22 +1,20 @@
 .bg-white{
   background-color: white;
   border-bottom: 1px solid, grey;
+  padding: 24px;
 }
 
-.text-green{
-  color: grey;
+.text-brown{
+  color: #3C2F2F;
   margin-right: 24px;
+  font-size: 20px;
   &:hover{
-    color: #082F35;
+    color: #854442;
     text-decoration: none;
   }
 }
-.fas{
-  .fa-coffee{
-    color:teal;
-  }
-}
 
-.navbar-brand{
-  color: brown;
+.icon-brown{
+  color:#3C2F2F;
+  margin-right: 24px;
 }
