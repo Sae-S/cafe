@@ -16,15 +16,17 @@
     text-decoration: none;
     font-family: 'Merriweather', serif;
     font-weight: 400;
+    font-size: 32px;
     &:hover{
       text-decoration: none;
     }
   }
 }
 
+
 .card-product {
   overflow: hidden;
-  height: 240px;
+  height: 220px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -38,6 +40,7 @@
   margin: 0;
   font-family: 'Merriweather', serif;
 }
+
 
 .card-product{
   padding: 24px;
@@ -64,6 +67,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 24px;
 }
 
 .card-trip > img {
