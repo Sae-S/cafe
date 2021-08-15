@@ -1,4 +1,4 @@
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cf46ca73864367.5c1818850574b.jpg);">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('<%= cl_image_path @shop.photo.key, height: 400, crop: :fill %>')">
   <div class="row">
     <div class="col-md-7 my-auto">
       <h1><%= @shop.name %></h1>
@@ -31,8 +31,9 @@
   <div class="row">
     <% @shop.menus.each do |menu| %>
       <div class="col-md-6">
+      <% if menu.photo.attached? %>
         <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <img src="<%= cl_image_path menu.photo.key, height: 300, crop: :fill %>" />
           <div class="card-trip-infos">
             <div>
               <h2><%= menu.name %></h2>
@@ -41,6 +42,15 @@
             <h2>＄<%= menu.price%></h2>
           </div>
         </div>
+      <% else %>
+        <div class="card-trip" style="background-color">
+          <div>
+            <h2><%= menu.name %></h2>
+            <p><%= menu.description %></p>
+          </div>
+          <h2>＄<%= menu.price%></h2>
+        </div>
+      <% end %>
       </div>
     <% end %>
   </div>

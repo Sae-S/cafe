@@ -3,6 +3,7 @@
     <%= f.input :name %>
     <%= f.input :rating, collection: 1..5%>
     <%= f.input :address%>
+    <%= f.input :photo, as: :file %>
     <%= f.submit class: 'btn btn-info mt-2' %>
   <% end %>
 </div>

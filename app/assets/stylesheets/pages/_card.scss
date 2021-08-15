@@ -1,5 +1,6 @@
 .card-category {
   background-size: cover;
+  background-color: teal;
   background-position: center;
   height: 180px;
   display: flex;
@@ -17,6 +18,8 @@
     font-family: 'Merriweather', serif;
     font-weight: 400;
     font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
     &:hover{
       text-decoration: none;
     }
@@ -102,4 +105,20 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .card-category {
+    background-size: cover;
+    background-color: teal;
+    width: 360px;
+    background-position: center;
+    height: 180px;
+  }
+  .col-lg-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
